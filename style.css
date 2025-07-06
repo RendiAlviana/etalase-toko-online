@@ -15,14 +15,17 @@
 nav {
   display: flex;
   justify-content: center;
+  /* width: fit-content; */
 }
 nav div {
   margin: 0 8px;
+  box-sizing: border-box;
   font-weight: bold;
   font-size: 0.8em;
   opacity: 0.5;
   transition: 0.5s;
   cursor: pointer;
+  white-space: nowrap;
 }
 .terpilih {
   color: #066442;
@@ -34,9 +37,19 @@ nav div {
 .terpilih::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 20px;
   width: 100%;
   height: 2px;
   border-radius: 2px;
   background-color: #2eaab8;
+}
+
+@media (max-width: 520px) {
+  nav div {
+    margin: 0 3px;
+    font-size: 0.7em;
+  }
+  .terpilih {
+    font-size: 0.8em;
+  }
 }
